@@ -45,7 +45,7 @@ appjail image export filebrowser
 ### Arguments
 
 * `filebrowser_builder` (default: `filebrowserb`): Makejail builder name.
-* `filebrowser_options` (mandatory): Makejail that contains options for the Makejail builder. This Makejail is intended for passing network options.
+* `filebrowser_options` (mandatory): Makejail that contains options for the Makejail builder. This Makejail is intended for passing network options. An absolute path must be passed.
 
 ## Tags
 
