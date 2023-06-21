@@ -3,6 +3,3 @@ INCLUDE options/options.makejail
 ARG filebrowser_tag=latest
 
 FROM --entrypoint gh+AppJail-makejails/filebrowser filebrowser:${filebrowser_tag}
-
-SYSRC filebrowser_enable=YES
-SERVICE filebrowser start
