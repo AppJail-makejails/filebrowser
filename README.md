@@ -70,6 +70,10 @@ Refer to the filebrowser documentation for details.
 
 ```sh
 appjail makejail -j filebrowser -f "gh+AppJail-makejails/filebrowser --file build.makejail" -- --filebrowser_options "$PWD/options/network.makejail"
+appjail sysrc jail filebrowser -x defaultrouter
+appjail stop filebrowser
+appjail cmd local filebrowser sh -c "rm -f var/log/*"
+appjail cmd local filebrowser rm -f var/db/filebrowser/filebrowser.db
 appjail image export filebrowser
 ```
 
