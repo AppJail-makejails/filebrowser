@@ -70,8 +70,26 @@ Refer to the filebrowser documentation for details.
 
 ## How to build the Image
 
+Make any changes you want to your image.
+
+```
+INCLUDE options/network.makejail
+INCLUDE gh+AppJail-makejails/filebrowser --file build.makejail
+
+SYSRC filebrowser_enable=YES
+SERVICE filebrowser start
+```
+
+Build the jail:
+
 ```sh
-appjail makejail -j filebrowser -f "gh+AppJail-makejails/filebrowser --file build.makejail" -- --filebrowser_options "$PWD/options/network.makejail"
+appjail makejail -j filebrowser -- \
+    --filebrowser_options "$PWD/options/network.makejail"
+```
+
+Remove unportable or unnecessary files and directories and export the jail:
+
+```sh
 appjail sysrc jail filebrowser -x defaultrouter
 appjail stop filebrowser
 appjail cmd local filebrowser sh -c "rm -f var/log/*"
