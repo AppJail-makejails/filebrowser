@@ -1,0 +1,28 @@
+INCLUDE options/options.makejail
+
+ARG filebrowser_builder=filebrowserb
+ARG filebrowser_options
+
+CMD echo "======> Building filebrowser... <======"
+EXEC --file builder.makejail --before-include "${filebrowser_options}" --name "${filebrowser_builder}"
+
+CMD echo "======> Creating directories... <======"
+CMD mkdir -vp /usr/local/bin
+
+CMD echo "======> Installing filebrowser... <======"
+COPY --verbose --jail "${filebrowser_builder}" /filebrowser/filebrowser /usr/local/bin
+
+CMD echo "======> Destroying builder... <======"
+DESTROY --force "${filebrowser_builder}"
+
+CMD echo "======> Creating user 'filebrowser' <======"
+CMD pw useradd -n filebrowser -c "Web File Browser" -d /var/db/filebrowser -s /bin/sh
+CMD mkdir -vp /var/db/filebrowser
+CMD mkdir -vp /usr/local/www/filebrowser
+CMD chown -v filebrowser:filebrowser /usr/local/www/filebrowser
+CMD chown -v filebrowser:filebrowser /var/db/filebrowser
+
+CMD echo "======> Installing rc script... <======"
+CMD mkdir -vp /usr/local/etc/rc.d
+COPY --verbose files/filebrowser.in /usr/local/etc/rc.d/filebrowser
+CMD chmod +x /usr/local/etc/rc.d/filebrowser

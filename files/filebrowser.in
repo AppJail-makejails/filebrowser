@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# PROVIDE: filebrowser
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name=filebrowser
+desc="Music streaming server / subsonic server API implementation"
+rcvar=${name}_enable
+
+start_precmd="filebrowser_startprecmd"
+
+load_rc_config "${name}"
+
+: ${filebrowser_enable:="NO"}
+: ${filebrowser_user:="filebrowser"}
+: ${filebrowser_group:="filebrowser"}
+: ${filebrowser_args:="-a 0.0.0.0 -d /var/db/filebrowser/filebrowser.db -l stdout -r /usr/local/www/filebrowser"}
+: ${filebrowser_logfile:="/var/log/filebrowser.log"}
+
+pidfile="/var/run/filebrowser.pid"
+procname="/usr/local/bin/filebrowser"
+command="/usr/sbin/daemon"
+command_args="-c -p ${pidfile} -o ${filebrowser_logfile} ${procname} ${filebrowser_args}"
+
+filebrowser_startprecmd()
+{
+        if [ ! -e "${pidfile}" ]; then
+                install -o "${filebrowser_user}" -g "${filebrowser_group}" /dev/null "${pidfile}"
+        fi
+
+        if [ ! -e "${filebrowser_logfile}" ]; then
+                install -o "${filebrowser_user}" -g "${filebrowser_group}" /dev/null "${filebrowser_logfile}"
+        fi
+}
+
+run_rc_command "$1"
