@@ -6,6 +6,8 @@ filebrowser provides a file managing interface within a specified directory and 
 
 ## How to use this Makejail
 
+### Basic usage
+
 ```
 INCLUDE options/network.makejail
 INCLUDE gh+AppJail-makejails/filebrowser
@@ -30,6 +32,35 @@ appjail makejail -j filebrowser
 # or use a network explicitly
 appjail makejail -j filebrowser -- --network development
 ```
+
+### Adding users
+
+You can modify the database to, for example, add users.
+
+```
+INCLUDE options/network.makejail
+INCLUDE gh+AppJail-makejails/filebrowser
+
+OPTION expose=8080
+
+SERVICE filebrowser stop
+
+CMD mkdir -p /usr/local/www/filebrowser/users/rscott
+CMD chown filebrowser:filebrowser /usr/local/www/filebrowser/users/rscott
+
+CMD mkdir -p /usr/local/www/filebrowser/users/mscorsese
+CMD chown filebrowser:filebrowser /usr/local/www/filebrowser/users/mscorsese
+
+WORKDIR /var/db/filebrowser
+USER filebrowser
+
+RUN filebrowser users add rscott american_gangster_2007 --scope /usr/local/www/filebrowser/users/rscott
+RUN filebrowser users add mscorsese mean_streets_1973 --scope /usr/local/www/filebrowser/users/mscorsese
+
+SERVICE filebrowser start
+```
+
+Refer to the filebrowser documentation for details.
 
 ### Arguments
 
