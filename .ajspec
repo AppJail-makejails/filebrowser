@@ -1,5 +1,7 @@
+tags: latest
+latest.arch: amd64
 latest.name: "filebrowser"
-latest.timestamp: 1687337514
+latest.timestamp.amd64: 1687337514
 latest.sum.amd64: a77ba2aa67aabb827efa28ebe3e79171df3e17afdba5f60b2af9b5f0d4433b70
 latest.size.amd64: 14039040
 latest.source.amd64: https://dtxdf.duckdns.org/48t9O3x0zc/filebrowser_latest_amd64_image_appjail
