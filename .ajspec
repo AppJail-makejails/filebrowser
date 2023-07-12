@@ -1,8 +1,17 @@
-tags: latest
-latest.arch: amd64
-latest.name: "filebrowser"
-latest.timestamp.amd64: 1687337514
-latest.sum.amd64: a77ba2aa67aabb827efa28ebe3e79171df3e17afdba5f60b2af9b5f0d4433b70
-latest.size.amd64: 14039040
-latest.source.amd64: https://dtxdf.duckdns.org/48t9O3x0zc/filebrowser_latest_amd64_image_appjail
-latest.source.amd64+: https://anonget.onrender.com/48t9O3x0zc/filebrowser_latest_amd64_image_appjail
+tags: 13.1
+13.1.arch: amd64
+13.1.name: "filebrowser"
+13.1.timestamp.amd64: 1689190757
+13.1.sum.amd64: 48ddfdef76fde84ecf943a9e8999cd1afa729b02761b719c1f8234f7024c23c1
+13.1.size.amd64: 14268320
+13.1.source.amd64: https://dtxdf.duckdns.org/m2ifOc17za/filebrowser_13_1_amd64_image_appjail
+13.1.source.amd64+: https://anonget.onrender.com/m2ifOc17za/filebrowser_13_1_amd64_image_appjail
+
+tags+: 13.2
+13.2.arch: amd64
+13.2.name: "filebrowser"
+13.2.timestamp.amd64: 1689191326
+13.2.sum.amd64: a11cbd5958b5afc65f96a3c998d00d0da3cbfc06e4159872a64fbf4bac7c8c05
+13.2.size.amd64: 14032536
+13.2.source.amd64: https://dtxdf.duckdns.org/p4icOd19z1/filebrowser_13_2_amd64_image_appjail
+13.2.source.amd64+: https://anonget.onrender.com/p4icOd19z1/filebrowser_13_2_amd64_image_appjail

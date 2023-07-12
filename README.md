@@ -66,7 +66,7 @@ Refer to the filebrowser documentation for details.
 
 ### Arguments
 
-* `filebrowser_tag` (default: `latest`): see [#tags](#tags).
+* `filebrowser_tag` (default: `13.2`): see [#tags](#tags).
 
 ## How to build the Image
 
@@ -104,4 +104,7 @@ appjail image export filebrowser
 
 ## Tags
 
-* `latest` (osarch: `amd64`, osversion: `13.2-RELEASE`).
+| Tag    | Arch     | Version        |
+| ------ | -------- | -------------- |
+| `13.2` | `amd64`  | `13.2-RELEASE` |
+| `13.1` | `amd64`  | `13.1-RELEASE` |
