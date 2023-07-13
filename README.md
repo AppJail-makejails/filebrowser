@@ -104,7 +104,7 @@ appjail image export filebrowser
 
 ## Tags
 
-| Tag    | Arch     | Version           |
-| ------ | -------- | ----------------- |
-| `13.2` | `amd64`  | `13.2-RELEASE-p1` |
-| `13.1` | `amd64`  | `13.1-RELEASE-p8` |
+| Tag    | Arch     | Version           | Type   |
+| ------ | -------- | ----------------- | ------ |
+| `13.2` | `amd64`  | `13.2-RELEASE-p1` | `thin` |
+| `13.1` | `amd64`  | `13.1-RELEASE-p8` | `thin` |
