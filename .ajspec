@@ -1,17 +1,9 @@
-tags: 13.1
-13.1.arch: amd64
-13.1.name: "filebrowser"
-13.1.timestamp.amd64: 1689214038
-13.1.sum.amd64: e9d283da22bfa895aa4133424ac8817d4b4a6c3046f029bb2fee803048b45238
-13.1.size.amd64: 14267844
-13.1.source.amd64: https://dtxdf.duckdns.org/WaUcb62fz4/filebrowser_13_1_amd64_image_appjail
-13.1.source.amd64+: https://anonget.onrender.com/WaUcb62fz4/filebrowser_13_1_amd64_image_appjail
-
-tags+: 13.2
+tags: 13.2
 13.2.arch: amd64
 13.2.name: "filebrowser"
-13.2.timestamp.amd64: 1689215026
-13.2.sum.amd64: 2a1e23c1cc8a11057b1f25dfc06a7207d8dbb08f5a7e65b358715b68268c8682
-13.2.size.amd64: 14031652
-13.2.source.amd64: https://dtxdf.duckdns.org/VaU0b926zb/filebrowser_13_2_amd64_image_appjail
-13.2.source.amd64+: https://anonget.onrender.com/VaU0b926zb/filebrowser_13_2_amd64_image_appjail
+13.2.timestamp.amd64: 1691179140
+13.2.sum.amd64: e55a9e54ad4a2f62c300bf7560f0b21428dc8ec7c4ce805d041715e640212751
+13.2.size.amd64: 14165644
+13.2.source.amd64: https://dtxdf.duckdns.org/f3CeOa62z6/filebrowser_13_2_amd64_image_appjail
+13.2.source.amd64+: https://storm-bsd.duckdns.org/f3CeOa62z6/filebrowser_13_2_amd64_image_appjail
+13.2.source.amd64+: https://anonget.onrender.com/f3CeOa62z6/filebrowser_13_2_amd64_image_appjail
