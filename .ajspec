@@ -1,9 +1,7 @@
 tags: 13.2
 13.2.arch: amd64
 13.2.name: "filebrowser"
-13.2.timestamp.amd64: 1691179140
-13.2.sum.amd64: e55a9e54ad4a2f62c300bf7560f0b21428dc8ec7c4ce805d041715e640212751
-13.2.size.amd64: 14165644
-13.2.source.amd64: https://dtxdf.duckdns.org/f3CeOa62z6/filebrowser_13_2_amd64_image_appjail
-13.2.source.amd64+: https://storm-bsd.duckdns.org/f3CeOa62z6/filebrowser_13_2_amd64_image_appjail
-13.2.source.amd64+: https://anonget.onrender.com/f3CeOa62z6/filebrowser_13_2_amd64_image_appjail
+13.2.timestamp.amd64: 1692099598
+13.2.sum.amd64: 8aaa388e5933ff6c2c7df34c82fb389dacfc4f3364ec17bdfa295602ea7ea6cf
+13.2.size.amd64: 14394536
+13.2.source.amd64: "https://drive.google.com/uc?export=download&id=1sEu9i99HIq32GmTyXoKQuZBjvEIpz1Gl"
