@@ -77,7 +77,6 @@ INCLUDE options/network.makejail
 INCLUDE gh+AppJail-makejails/filebrowser --file build.makejail
 
 SYSRC filebrowser_enable=YES
-SERVICE filebrowser start
 ```
 
 Build the jail:
