@@ -1,8 +1,8 @@
 tags+: 13.2
 13.2.arch: amd64
 13.2.name: "filebrowser"
-13.2.timestamp.amd64: 1698685733
-13.2.sum.amd64: 0385d05f78e96bbdab90f4111a13974a30a626f5933b731091343f7752642cf9
-13.2.size.amd64: 11633556
+13.2.timestamp.amd64: 1700060934
+13.2.sum.amd64: aff9c40bca5a6f9d6a28d340a12d295f7f1adbabb2d9c9c36c199deb4e97bbdf
+13.2.size.amd64: 11647012
 13.2.source.amd64: https://images.all101bsd.download/filebrowser/13.2-amd64-image.appjail
 13.2.source.amd64+: http://appjail.hpc.at/filebrowser/13.2-amd64-image.appjail
