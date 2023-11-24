@@ -90,7 +90,6 @@ Remove unportable or unnecessary files and directories and export the jail:
 appjail sysrc jail filebrowser -x defaultrouter
 appjail stop filebrowser
 appjail cmd local filebrowser sh -c "rm -f var/log/*"
-appjail cmd local filebrowser rm -f var/db/filebrowser/filebrowser.db
 appjail image export filebrowser
 ```
 
