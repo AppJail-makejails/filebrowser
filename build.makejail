@@ -26,3 +26,6 @@ CMD echo "======> Installing rc script... <======"
 CMD mkdir -vp /usr/local/etc/rc.d
 COPY --verbose files/filebrowser.in /usr/local/etc/rc.d/filebrowser
 CMD chmod +x /usr/local/etc/rc.d/filebrowser
+
+CMD echo "======> Enabling filebrowser... <======"
+SYSRC filebrowser_enable=YES

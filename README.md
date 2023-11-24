@@ -75,8 +75,6 @@ Make any changes you want to your image.
 ```
 INCLUDE options/network.makejail
 INCLUDE gh+AppJail-makejails/filebrowser --file build.makejail
-
-SYSRC filebrowser_enable=YES
 ```
 
 Build the jail:
