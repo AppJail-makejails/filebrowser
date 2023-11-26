@@ -68,36 +68,6 @@ Refer to the filebrowser documentation for details.
 
 * `filebrowser_tag` (default: `13.2`): see [#tags](#tags).
 
-## How to build the Image
-
-Make any changes you want to your image.
-
-```
-INCLUDE options/network.makejail
-INCLUDE gh+AppJail-makejails/filebrowser --file build.makejail
-```
-
-Build the jail:
-
-```sh
-appjail makejail -j filebrowser -- \
-    --filebrowser_options "$PWD/options/network.makejail"
-```
-
-Remove unportable or unnecessary files and directories and export the jail:
-
-```sh
-appjail sysrc jail filebrowser -x defaultrouter
-appjail stop filebrowser
-appjail cmd local filebrowser sh -c "rm -f var/log/*"
-appjail image export filebrowser
-```
-
-### Arguments
-
-* `filebrowser_builder` (default: `filebrowserb`): Makejail builder name.
-* `filebrowser_options` (mandatory): Makejail that contains options for the Makejail builder. This Makejail is intended for passing network options. An absolute path must be passed.
-
 ## Tags
 
 | Tag    | Arch     | Version        | Type   |
