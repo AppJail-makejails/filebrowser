@@ -1,0 +1,2 @@
+OPTION volume=filebrowser-db mountpoint:/var/db/filebrowser owner:1001 group:1001
+OPTION volume=filebrowser-www mountpoint:/usr/local/www/filebrowser owner:1001 group:1001
