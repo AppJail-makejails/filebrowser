@@ -68,6 +68,13 @@ Refer to the filebrowser documentation for details.
 
 * `filebrowser_tag` (default: `13.2`): see [#tags](#tags).
 
+### Volumes
+
+| Name            | Owner | Group | Perm | Type | Mountpoint                 |
+| --------------- | ----- | ----- | ---- | ---- | -------------------------- |
+| filebrowser-db  | 1001  | 1001  |  -   |  -   | /var/db/filebrowser        |
+| filebrowser-www | 1001  | 1001  |  -   |  -   | /usr/local/www/filebrowser |
+
 ## Tags
 
 | Tag    | Arch     | Version        | Type   |
