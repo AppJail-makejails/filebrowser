@@ -9,7 +9,7 @@ CMD git clone --depth 1 https://github.com/filebrowser/filebrowser.git /filebrow
 CMD echo "======> Compiling <======"
 # Workaround since NPM can't install dependencies on my network due to a
 # timeout error.
-CMD npm config set fetch-retry-maxtimeout 120000
-CMD npm config set fetch-retry-mintimeout 15000
+CMD npm config set fetch-retry-maxtimeout 180000
+CMD npm config set fetch-retry-mintimeout 30000
 CMD npm config set fetch-timeout 600000
 CMD cd /filebrowser; gmake build
