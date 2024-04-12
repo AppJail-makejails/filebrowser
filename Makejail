@@ -1,5 +1,5 @@
 INCLUDE options/options.makejail
 
-ARG filebrowser_tag=13.2
+ARG filebrowser_tag=13.3
 
 FROM --entrypoint gh+AppJail-makejails/filebrowser filebrowser:${filebrowser_tag}
