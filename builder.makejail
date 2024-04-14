@@ -1,10 +1,14 @@
 INCLUDE options/options.makejail
 
-CMD echo "======> Installing dependencies (build) <======"
-PKG bash git-lite gmake go npm
+ARG filebrowser_version=2.28.0
 
-CMD echo "======> Cloning... <======"
-CMD git clone --depth 1 https://github.com/filebrowser/filebrowser.git /filebrowser
+CMD echo "======> Installing dependencies (build) <======"
+PKG bash gmake go npm
+
+CMD echo "======> Downloading... <======"
+CMD fetch -o /tmp/filebrowser.tgz https://github.com/filebrowser/filebrowser/archive/refs/tags/v${filebrowser_version}.tar.gz
+CMD mkdir -p /filebrowser
+CMD tar -C /filebrowser --strip-components=1 -xf /tmp/filebrowser.tgz
 
 CMD echo "======> Compiling <======"
 # Workaround since NPM can't install dependencies on my network due to a
