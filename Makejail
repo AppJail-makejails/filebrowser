@@ -11,6 +11,7 @@ STAGE start
 ENV FB_ADDRESS=0.0.0.0
 ENV FB_LOG=/var/log/filebrowser/filebrowser.log
 ENV FB_DATABASE=/var/db/filebrowser/filebrowser.db
+ENV FB_ROOT=/usr/local/www/filebrowser
 
 RUN daemon \
 	-r \
