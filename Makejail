@@ -9,7 +9,7 @@ STOP
 STAGE start
 
 ENV FB_ADDRESS=0.0.0.0
-ENV FB_LOG=/var/log/filebrowser.log
+ENV FB_LOG=/var/log/filebrowser/filebrowser.log
 ENV FB_DATABASE=/var/db/filebrowser/filebrowser.db
 
 RUN daemon \
