@@ -3,3 +3,32 @@ INCLUDE options/options.makejail
 ARG filebrowser_tag=13.3
 
 FROM --entrypoint gh+AppJail-makejails/filebrowser filebrowser:${filebrowser_tag}
+
+STOP
+
+STAGE start
+
+ENV FB_ADDRESS=0.0.0.0
+ENV FB_LOG=/var/log/filebrowser.log
+ENV FB_DATABASE=/var/db/filebrowser/filebrowser.db
+
+RUN daemon \
+	-r \
+	-f \
+	-t "Web File Browser" \
+	-u filebrowser \
+	-P /var/run/filebrowser.master.pid \
+	-p /var/run/filebrowser.pid \
+		filebrowser
+
+STAGE custom:filebrowser_status
+
+CMD if [ -f "/var/run/filebrowser.pid" ]; then \
+        top -ap `head -1 /var/run/filebrowser.pid`; \
+    fi
+
+STAGE custom:filebrowser_log
+
+CMD if [ -f "/var/log/filebrowser/filebrowser.log" ]; then \
+        less -R /var/log/filebrowser/filebrowser.log; \
+    fi
