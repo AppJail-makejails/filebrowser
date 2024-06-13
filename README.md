@@ -65,9 +65,10 @@ DIRECTOR_PROJECT=filebrowser
 You can modify the database to, for example, add users.
 
 ```
-INCLUDE options/network.makejail
 INCLUDE gh+AppJail-makejails/filebrowser
 
+OPTION virtualnet=:<random> default
+OPTION nat
 OPTION expose=8080
 
 SERVICE filebrowser stop
