@@ -120,7 +120,7 @@ appjail run -s filebrowser_log filebrowser
 
 ## Tags
 
-| Tag    | Arch     | Version        | Type   |
-| ------ | -------- | -------------- | ------ |
-| `13.3` | `amd64`  | `13.3-RELEASE` | `thin` |
-| `14.1` | `amd64`  | `14.1-RELEASE` | `thin` |
+| Tag    | Arch     | Version        | Type   | `filebrowser_version` |
+| ------ | -------- | -------------- | ------ | --------------------- |
+| `13.3` | `amd64`  | `13.3-RELEASE` | `thin` |       `2.30.0`        |
+| `14.1` | `amd64`  | `14.1-RELEASE` | `thin` |       `2.30.0`        |
