@@ -92,7 +92,7 @@ Refer to the filebrowser documentation for details.
 
 ### Arguments (stage: build)
 
-* `filebrowser_tag` (default: `13.3`): see [#tags](#tags).
+* `filebrowser_tag` (default: `13.4`): see [#tags](#tags).
 
 ### Check current status
 
@@ -122,5 +122,5 @@ appjail run -s filebrowser_log filebrowser
 
 | Tag    | Arch     | Version        | Type   | `filebrowser_version` |
 | ------ | -------- | -------------- | ------ | --------------------- |
-| `13.3` | `amd64`  | `13.3-RELEASE` | `thin` |       `2.30.0`        |
+| `13.4` | `amd64`  | `13.4-RELEASE` | `thin` |       `2.30.0`        |
 | `14.1` | `amd64`  | `14.1-RELEASE` | `thin` |       `2.30.0`        |
