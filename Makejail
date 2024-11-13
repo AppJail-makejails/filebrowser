@@ -14,11 +14,9 @@ ENV FB_DATABASE=/var/db/filebrowser/filebrowser.db
 ENV FB_ROOT=/usr/local/www/filebrowser
 
 RUN daemon \
-	-r \
 	-f \
 	-t "Web File Browser" \
 	-u filebrowser \
-	-P /var/run/filebrowser.master.pid \
 	-p /var/run/filebrowser.pid \
 		filebrowser
 
