@@ -45,6 +45,8 @@ services:
     start-environment:
       - FB_NOAUTH: 1
 
+default_volume_type: '<volumefs>'
+
 volumes:
   db:
     device: .volumes/db
