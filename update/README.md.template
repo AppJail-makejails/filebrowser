@@ -99,7 +99,7 @@ Refer to the filebrowser documentation for details.
 
 ### Check current status
 
-The custom stage `filebrowser_status` can be used to run `top(1)` to check the status of MeTube.
+The custom stage `filebrowser_status` can be used to run `top(1)` to check the status of File Browser.
 
 ```sh
 appjail run -s filebrowser_status filebrowser
