@@ -18,13 +18,13 @@ RUN daemon \
 	-f \
 	-t "Web File Browser" \
 	-u filebrowser \
-	-p /var/run/filebrowser.pid \
+	-p /var/run/filebrowser/filebrowser.pid \
 		filebrowser
 
 STAGE custom:filebrowser_status
 
-CMD if [ -f "/var/run/filebrowser.pid" ]; then \
-        top -ap `head -1 /var/run/filebrowser.pid`; \
+CMD if [ -f "/var/run/filebrowser/filebrowser.pid" ]; then \
+        top -ap `head -1 /var/run/filebrowser/filebrowser.pid`; \
     fi
 
 STAGE custom:filebrowser_log

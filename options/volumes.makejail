@@ -1,3 +1,3 @@
-OPTION volume=filebrowser-db mountpoint:/var/db/filebrowser owner:1001 group:1001
-OPTION volume=filebrowser-log mountpoint:/var/log/filebrowser owner:1001 group:1001
-OPTION volume=filebrowser-www mountpoint:/usr/local/www/filebrowser owner:1001 group:1001
+OPTION volume=filebrowser-db mountpoint:/var/db/filebrowser owner:835 group:835 perm:700
+OPTION volume=filebrowser-log mountpoint:/var/log/filebrowser owner:835 group:835 perm:700
+OPTION volume=filebrowser-www mountpoint:/usr/local/www/filebrowser owner:835 group:835

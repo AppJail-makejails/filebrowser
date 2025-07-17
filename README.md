@@ -1,6 +1,6 @@
-# filebrowser
+# File Browser
 
-filebrowser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. It allows the creation of multiple users and each user can have its own directory. It can be used as a standalone app.
+File Browser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. It allows the creation of multiple users and each user can have its own directory. It can be used as a standalone app.
 
 filebrowser.org
 
@@ -117,13 +117,13 @@ appjail run -s filebrowser_log filebrowser
 
 | Name            | Owner | Group | Perm | Type | Mountpoint                 |
 | --------------- | ----- | ----- | ---- | ---- | -------------------------- |
-| filebrowser-db  | 1001  | 1001  |  -   |  -   | /var/db/filebrowser        |
-| filebrowser-log | 1001  | 1001  |  -   |  -   | /var/log/filebrowser       |
-| filebrowser-www | 1001  | 1001  |  -   |  -   | /usr/local/www/filebrowser |
+| filebrowser-db  | 835   | 835   | 700  |  -   | /var/db/filebrowser        |
+| filebrowser-log | 835   | 835   | 700  |  -   | /var/log/filebrowser       |
+| filebrowser-www | 835   | 835   |  -   |  -   | /usr/local/www/filebrowser |
 
 ## Tags
 
-| Tag    | Arch     | Version        | Type   | `filebrowser_version` |
-| ------ | -------- | -------------- | ------ | --------------------- |
-| `13.5` | `amd64`  | `13.5-RELEASE` | `thin` |       `2.32.0`        |
-| `14.3` | `amd64`  | `14.3-RELEASE` | `thin` |       `2.32.0`        |
+| Tag        | Arch     | Version            | Type   |
+| ---------- | -------- | ------------------ | ------ |
+| `13.5` | `amd64`  | `13.5-RELEASE` | `thin` |
+| `14.3` | `amd64`  | `14.3-RELEASE` | `thin` |

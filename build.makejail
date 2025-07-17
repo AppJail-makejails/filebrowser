@@ -1,24 +1,4 @@
-ARG filebrowser_version=2.32.0
-
 INCLUDE options/options.makejail
 INCLUDE options/volumes.makejail
 
-CMD echo "======> Downloading filebrowser... <======"
-CMD fetch -vo /tmp/filebrowser.tar.gz https://github.com/filebrowser/filebrowser/releases/download/v${filebrowser_version}/freebsd-amd64-filebrowser.tar.gz
-
-CMD echo "======> Installing filebrowser... <======"
-CMD mkdir -vp /tmp/out
-CMD tar -C /tmp/out -xvf /tmp/filebrowser.tar.gz
-CMD mkdir -vp /usr/local/bin
-CMD cp -va /tmp/out/filebrowser /usr/local/bin
-
-CMD echo "======> Creating user 'filebrowser' <======"
-CMD pw useradd -n filebrowser -c "Web File Browser" -d /var/db/filebrowser -s /bin/sh
-
-CMD echo "======> Creating directories... <======"
-CMD mkdir -vp /usr/local/www/filebrowser
-CMD chown -v filebrowser:filebrowser /usr/local/www/filebrowser
-CMD mkdir -vp /var/db/filebrowser
-CMD chown -v filebrowser:filebrowser /var/db/filebrowser
-CMD mkdir -vp /var/log/filebrowser
-CMD chown -v filebrowser:filebrowser /var/log/filebrowser
+PKG filebrowser
