@@ -67,6 +67,14 @@ volumes:
 * `PGID` (default: `1000`): Equivalent to `PUID` but for the Process Group ID.
 * `PUID` (default: `1000`): Process User ID for the container's main process, allowing you to match the owner of files written to mounted host volumes to your host system's user. Writable volumes are changed based on this environment variable.
 
+### Volumes
+
+| Name | Owner | Group | Perm | Type | Mountpoint |
+| --- | --- | --- | --- | --- | --- |
+| appjail-2d07ddb3d6-database | `${PUID}` | `${PGID}` | - | - | /database |
+| appjail-3e723ade99-config | `${PUID}` | `${PGID}` | - | - | /config |
+| appjail-48d1ecb1ac-srv | `${PUID}` | `${PGID}` | - | - | /srv |
+
 ## OCI Configuration
 
 ```yaml
