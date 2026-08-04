@@ -37,7 +37,7 @@ services:
   filebrowser:
     makejail: gh+AppJail-makejails/filebrowser
     options:
-      - container: 'boot args:--pull'
+      - container: 'args:--pull'
       - expose: '80:8080'
     volumes:
       - srv: /srv

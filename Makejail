@@ -1,5 +1,6 @@
 ARG filebrowser_from=ghcr.io/appjail-makejails/filebrowser
 ARG filebrowser_tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=${filebrowser_from}:${filebrowser_tag}
