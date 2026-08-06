@@ -6,7 +6,7 @@ set -e
 
 create_user
 
-chown -R noroot:noroot \
+change_owner \
     /srv \
     /config \
     /database
@@ -40,6 +40,6 @@ if [ -z "${config_file}" ]; then
     set -- --config=/config/settings.json "$@"
 fi
 
-chown -R noroot:noroot /srv /config /database
+change_owner /srv /config /database
 
 exec su-exec noroot filebrowser "$@"
