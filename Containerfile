@@ -14,7 +14,7 @@ LABEL org.opencontainers.image.title="File Browser" \
 RUN set -xe; \
     \
     pkg update; \
-    pkg install -U filebrowser; \
+    pkg install filebrowser; \
     \
     if [ -z "${NO_PKGCLEAN}" ]; then \
         pkg clean -a; \
